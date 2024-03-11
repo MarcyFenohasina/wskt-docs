@@ -1,13 +1,7 @@
-Welcome to Lumache's documentation!
+Welcome to WebSoKeyTo's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+The WebSoKeyTo platform is an online environment for designing and adapting AAC (augmentative and alternative communication) technical aids, which can be easily used without any specific technical skills. The WebSoKeyTo platform is based on SoKeyTo (previous knowledge from IRIT - Institut de Recherche en Informatique de Toulouse).
 
 .. note::
 
