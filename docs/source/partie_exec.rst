@@ -1,4 +1,4 @@
-Usage
+Partie Exécutable
 =====
 
 .. _installation:
