@@ -12,9 +12,11 @@ Contents
 
 .. toctree::
 
-   usage
-   api
-   config
+   
    environment
+   config
    partie_editeur
    partie_exec
+   api
+   code
+   usage
