@@ -1,7 +1,16 @@
 API
 ===
 
-.. autosummary::
-   :toctree: generated
+.. _liste_commandes:
 
-   WebSoKeyTo
+Liste des commandes
+-------------------
+...
+
+Modèle Client/Serveur
+---------------------
+...
+
+Intégration dans l'interface (éditeur)
+--------------------------------------
+...
