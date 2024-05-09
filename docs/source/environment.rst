@@ -6,13 +6,13 @@ Environment
 Architecture logicielle
 ------------
 
-.. image:: path/Archi_logicielle.png
+.. image:: images/Archi_logicielle.png
   :width: 400
   :alt: Alternative text
 
 Architecture matérielle
 ----------------
 
-.. image:: path/Archi_matérielle.png
+.. image:: imgages/Archi_matérielle.png
   :width: 400
   :alt: Alternative text
