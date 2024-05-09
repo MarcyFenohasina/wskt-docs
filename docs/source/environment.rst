@@ -1,34 +1,18 @@
-Usage
+Environment
 =====
 
-.. _installation:
+.. _archi_logicielle:
 
-Installation
+Architecture logicielle
 ------------
 
-To use Lumache, first install it using pip:
+.. image:: path/Archi_logicielle.png
+  :width: 400
+  :alt: Alternative text
 
-.. code-block:: console
-
-   (.venv) $ pip install lumache
-
-Creating recipes
+Architecture matérielle
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+.. image:: path/Archi_matérielle.png
+  :width: 400
+  :alt: Alternative text
