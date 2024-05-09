@@ -13,6 +13,6 @@ Architecture logicielle
 Architecture matérielle
 ----------------
 
-.. image:: imgages/Archi_matérielle.png
+.. image:: imgages/Archi_materielle.png
   :width: 400
   :alt: Alternative text
