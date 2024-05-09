@@ -14,5 +14,5 @@ Contents
 
    usage
    api
-   guide de configuration
+   config
    environment
