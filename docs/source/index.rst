@@ -14,8 +14,4 @@ Contents
 
    usage
    api
-<<<<<<< HEAD
    environment
-=======
-   code
->>>>>>> 1285b3de9ccc72375833e04c3d8fbbdd8f822e86
