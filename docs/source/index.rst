@@ -17,3 +17,4 @@ Contents
    config
    environment
    partie_editeur
+   partie_exec
