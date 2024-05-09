@@ -16,3 +16,4 @@ Contents
    api
    config
    environment
+   partie_editeur
