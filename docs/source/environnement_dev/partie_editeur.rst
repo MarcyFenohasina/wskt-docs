@@ -1,5 +1,5 @@
-Partie Exécutable
-=====
+Partie Éditeur
+================
 
 .. _installation:
 
