@@ -94,10 +94,12 @@ Dans un deuxième temps, vous pouvez brancher tous les capteurs fixes que vous a
 
 Vous avez donc fini l'étape de configuration des capteurs, sauf si vous avez à votre disposition de nouveaux capteurs non configurés à l'état d'usine.
 
-Configuration de capteurs DWM1001-Dev non configurés
-------------------------------------------------------
+Pour configurer d'autres capteurs, passez à la section suivante, sinon, passez à la section :ref:`Vérification du bon fonctionnement des capteurs <verif_capteurs>`
+
 
 .. _capteurs_non_config:
+Configuration de capteurs DWM1001-Dev non configurés
+------------------------------------------------------
 
 Si vous souhaitez ajouter de nouveaux capteurs de localisation DWM1001-Dev, il sera nécessaire de les configurer.
 
@@ -166,14 +168,57 @@ Pour permettre au processus de localisation de fonctionner, les capteurs doivent
 - Tag : **mode: tn (act,twr,np,le)**. Ce mode permet de configurer un capteur mobile. Vous devrez configurer un capteur mobile pour chaque utilisateur dans votre habitation.
 
 
-Vous aurez maintenant besoin du logiciel **Segger Embedded Studio for ARM** : https://www.segger.com/downloads/embedded-studio/#ESforARM 
+Pour chaque capteur que vous souhaitez configurer, une fois celui-ci configuré, veuillez le débrancher avant de brancher le capteur suivant à configurer.
+
+
+Pour configurer un anchor initiator, veuillez taper les commandes suivantes :
+
+- (Choisir un ID pour le réseau, par exemple '1234') : **nis 0x1234**
+
+- (Configurer la position du capteur, valeurs fournies par le constructeur) : **aps 0 0 1800**
+
+- (Mettre le capteur en mode initiateur) : **nmi**
+
+.. image:: images/nmi.png
+  :width: 400
+
+
+Pour configurer un anchor, veuillez taper les commandes suivantes :
+
+- (Taper le même ID de réseau que précédemment) : **nis 0x1234**
+
+- (Configurer la position du capteur, valeurs fournies par le constructeur) : **aps 10000 10000 1800**
+
+- (Mettre le capteur en mode anchor) : **nma**
+
+.. image:: images/nma.png
+  :width: 400
+
+
+Pour configurer un tag, veuillez taper les commandes suivantes :
+
+- (Taper le même ID de réseau que précédemment) : **nis 0x1234**
+
+- (Mettre le capteur en mode tag) : **nmt**
+
+.. image:: images/nmt.png
+  :width: 400
+
+
+A partir de maintenant, laissez votre Tag branché à votre ordinateur, car nous allons devoir y injecter le code permettant de communiquer les distances entres les capteurs.
+
+.. _Source_Code_DWM-Tag.zip: https://github.com/user-attachments/files/16817915/Source_Code_DWM-Tag.zip
+
+Veuillez télécharger le code source du capteur mobile : `Source_Code_DWM-Tag.zip`_
+
+Ensuite, vous aurez besoin du logiciel **Segger Embedded Studio for ARM** : https://www.segger.com/downloads/embedded-studio/#ESforARM 
 
 .. image:: images/segger_embedded_studio_arm.png
   :width: 650
 
 Et également du compilateur **GNU Tools ARM Embedded (version 5.4 2016q3)**
 
-.. _windows: https://developer.arm.com/-/media/Files/downloads/gnu-rm/5_4-2016q3/gcc-arm-none-eabi-5_4-2016q3-20160926-win32.exe?rev=b4aea310407243888567fc9cd4aded8b&revision=b4aea310-4072-4388-8567-fc9cd4aded8b?product=Downloads,32-bit,,Windows,5-2016-q3-update
+.. _Windows: https://developer.arm.com/-/media/Files/downloads/gnu-rm/5_4-2016q3/gcc-arm-none-eabi-5_4-2016q3-20160926-win32.exe?rev=b4aea310407243888567fc9cd4aded8b&revision=b4aea310-4072-4388-8567-fc9cd4aded8b?product=Downloads,32-bit,,Windows,5-2016-q3-update
 
 .. _Linux: https://developer.arm.com/-/media/Files/downloads/gnu-rm/5_4-2016q3/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2?rev=111dee36f88b46728ac648cf41b4d375&revision=111dee36-f88b-4672-8ac6-48cf41b4d375?product=Downloads,32-bit,,Linux,5-2016-q3-update
 
@@ -189,6 +234,60 @@ Liens de téléchargement :
 
 - `MacOS`_
 
+
+Une fois **Segger Embedded Studio for ARM** installé, veuillez extraire l'archive **Source_Code_DWM-Tag.zip** précédemment téléchargée, en effectuant sur ce fichier **Clic droit -> Extraire Tout**
+
+Ensuite, naviguez dans les dossiers **Source_Code_DWM-Tag -> Source_Code_DWM-Tag -> src -> dwm-tag** puis sur le fichier **dwm-tag.emProject**, effectuez **Clic droit -> Ouvrir avec -> Segger Embedded Studio for ARM** 
+
+Une fois le logiciel ouvert, appuyez sur **Target -> Connect J-Link** pour vous connecter au capteur mobile
+
+.. image:: images/segger_connect_jlink.png
+  :width: 600
+
+Puis appuyez sur **Build -> Build dwm-tag** pour compiler le code source
+
+.. image:: images/segger_build.png
+  :width: 600
+
+Et enfin, appuyez sur **Target -> Download dwm-tag** pour injecter le code compilé au capteur mobile
+
+.. image:: images/segger_download.png
+  :width: 600
+
+
+Félicitations, vous avez enfin terminé de configurer vos capteurs !
+
+Pour vérifier si tout fonctionne correctement, passez à la section suivante
+
+
+.. _verif_capteurs:
+Vérification du bon fonctionnement des capteurs
+-------------------------------------------------
+
+Pour vérifier si les distances fonctionnent, laissez branché ou rebranchez votre **capteur mobile** en USB à votre ordinateur, puis allumez à nouveau **Teraterm**
+
+Rappel de la configuration de Teraterm :
+
+Sur Tera Term, sélectionnez le port portant le nom **Périphérique série USB** (l'identificateur de port n'est pas nécessairement **COM3**)
+
+.. image:: images/teraterm.png
+  :width: 400
+
+Ensuite, dans la console de Tera Term, veuillez sélectionner Configuration -> Port Serie...
+
+.. image:: images/teraterm_console.png
+  :width: 400
+
+Puis veuillez sélectionner la vitesse de transmission à **115200** bauds et cliquez sur **New setting**.
+
+.. image:: images/teraterm_config.png
+  :width: 400
+
+
+Finalement, si tout fonctionne bien vous devriez voir des informations sur les distances transmises par le capteur mobile, un peu comme ceci :
+
+.. image:: images/teraterm_verif_distances.png
+  :width: 250
 
 
 .. toctree::
