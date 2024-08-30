@@ -13,7 +13,7 @@ Le projet WebSoKeyTo comprend deux solutions logicielles, à savoir un éditeur 
 L'éditeur d'interface est une solution en ligne permettant de concevoir une interface spécifique et de définir des actions correspondant aux besoins d'un utilisateur.
 
 L'exécuteur d'interface est une solution exécutée par l'utilisateur lui même, permettant d'afficher une interface précédemment définie dans l'éditeur et de pouvoir ainsi exécuter les actions définies pour l'utilisateur.
-Cette solution comprend également une interaction contextuelle par rapport à la localisation de l'utilisateur, adaptant l'interface selon la pièce où il se trouve.
+Cette solution comprend également (**#A IMPLEMENTER#**) une interaction contextuelle par rapport à la localisation de l'utilisateur, adaptant l'interface selon la pièce où il se trouve.
 
 
 Ces deux solutions permettent l'interaction avec des objets connectés, grâce à la communication avec OpenHab, une plateforme open-source de domotique qui permet de contrôler et d'automatiser divers appareils et systèmes dans une maison intelligente.
