@@ -52,7 +52,7 @@ Activez l'environnement virtuel (nécessaire avant chaque exécution) :
     source websokeyto_env/bin/activate
 
 Installer les dépendances
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Des dépendances sont requises au bon fonctionnement de l'exécutable, voici comment les installer :
 

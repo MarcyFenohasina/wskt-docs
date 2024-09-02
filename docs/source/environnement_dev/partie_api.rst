@@ -41,6 +41,7 @@ Liste des commandes
 - **get**
     
     - **things** \
+    
     └── *Récupérer la liste de tous les objets (Things)*
     
     - **thing**

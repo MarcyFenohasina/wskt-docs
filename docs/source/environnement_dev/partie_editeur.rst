@@ -103,10 +103,12 @@ Ce qu'il reste à implémenter
 ----------------------------
 
 - Pour la fonctionnalité d'exportation d'interfaces de CAA, la plupart des actions ont été implémentées, mais il manque tout de même l'action **'domotique'** qui n'a pas encore été ajoutée, ainsi que les actions **'macro'** et **'ambigue'**, dont je ne connais pas les spécificités.
+
 \
 
 - Par ailleurs, la fonctionnalité de balayage des boutons n'est également pas prise en compte lors de l'exportation.  
   Pour implémenter l'exportation de cette fonctionnalité, il serait probablement judicieux de créer un nouveau fichier **JSON** dans lequel se trouveraient les informations de balayage. Sinon, si cela simplifie les choses, se contenter de rajouter une propriété (property) **XML** à chaque page de l'interface (sauf **App.ui**, car c'est la fenêtre principale), ce qui permettrait à chaque page d'avoir des informations sur son balayage associé.
+
 \
 
 - Comme nous l'avions évoqué précédemment, la fonctionnalité d'exportation d'interface a subi une refonte complète (**ParseStateToXML.js**), mais la fonctionnalité d'importation, elle, reste inchangée à ce jour.  
