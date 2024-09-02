@@ -23,9 +23,9 @@ Ces deux solutions permettent l'interaction avec des objets connectés, grâce �
 
 Dans cette documentation vous trouverez :
 
-- Un manuel d'utilisation expliquant l'installation et la configuration du matériel, l'explication des configurations appropriées dans OpenHab ainsi que l'utilisation des deux solutions logicielles
+- Un manuel d'utilisation expliquant l'installation et la configuration du matériel, l'explication des configurations appropriées dans OpenHab ainsi que l'utilisation des deux solutions logicielles.
 
-- Une documentation permettant la compréhension de l'environnement de développement
+- Une documentation permettant la compréhension de l'environnement de développement.
 
 
 Contents
