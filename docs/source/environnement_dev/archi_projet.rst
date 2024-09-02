@@ -1,6 +1,8 @@
 Architecture du projet
 =========================
 
+.. _architecture_projet:
+
 Architecture logicielle
 ------------------------
 

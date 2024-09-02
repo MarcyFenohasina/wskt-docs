@@ -1,6 +1,8 @@
 Partie Editeur
 ==================
 
+.. _partie_editeur:
+
 La plateforme d'édition WebSoKeyTo est un logiciel permettant de concevoir des interfaces de communication alternative augmentée (CAA).
 
 La plateforme est actuellement composée de deux pages : Couche et Interface.

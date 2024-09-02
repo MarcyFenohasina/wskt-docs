@@ -1,6 +1,8 @@
 Bienvenue sur la documentation de WebSoKeyTo !
 ===============================================
 
+.. _bienvenue:
+
 La plateforme WebSoKeyTo est un environnement en ligne pour la conception et l'adaptation d'aides techniques de CAA (communication améliorée et alternative), qui peut être facilement utilisée sans compétences techniques spécifiques. La plateforme WebSoKeyTo est basée sur SoKeyTo (connaissances antérieures de l'IRIT - Institut de Recherche en Informatique de Toulouse)
 
 .. note::

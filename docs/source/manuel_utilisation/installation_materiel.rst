@@ -1,6 +1,8 @@
 Installation du matériel
 ========================
 
+.. _installation_materiel:
+
 Présentation du matériel
 -------------------------
 
@@ -54,6 +56,7 @@ Pour Linux ou MacOS, vous pouvez utiliser d'autres utilitaires tels que SerialTo
 Vous devez maintenant réitérer les étapes ci-dessous pour chaque capteur que vous possédez :
 
 - Branchez le capteur à votre PC à l'aide d'un câble USB
+
 \
 
 - Sur Tera Term, sélectionnez le port portant le nom **Périphérique série USB** (l'identificateur de port n'est pas nécessairement **COM3**)
@@ -72,8 +75,9 @@ Vous devez maintenant réitérer les étapes ci-dessous pour chaque capteur que 
   :width: 400
 
 - Dans la console, appuyez deux fois sur la touche **Entrée** pour démarrer le mode shell du capteur, puis entrez la commande **si**
+
 \
-  Vous devriez alors voir des informations s'afficher. Cherchez la ligne **mode** comme indiqué ci-dessous et prenez connaissance de ce qui est affiché.
+Vous devriez alors voir des informations s'afficher. Cherchez la ligne **mode** comme indiqué ci-dessous et prenez connaissance de ce qui est affiché.
 
 .. image:: images/teraterm_tag.png
   :width: 400
@@ -98,6 +102,7 @@ Pour configurer d'autres capteurs, passez à la section suivante, sinon, passez 
 
 
 .. _capteurs_non_config:
+
 Configuration de capteurs DWM1001-Dev non configurés
 ------------------------------------------------------
 
@@ -160,9 +165,11 @@ Dans la console, appuyez deux fois sur la touche **Entrée** pour démarrer le m
 Pour permettre au processus de localisation de fonctionner, les capteurs doivent être configurés avec les modes suivants :
 
 - Anchor initiator : **mode: ani (act,real)**. Ce mode permet de configurer un capteur fixe qui va initier le réseau de capteur. Il est impératif d'avoir au moins un capteur configuré sur ce mode.
+
 \
 
 - Anchor : **mode: an (act,-)**. Ce mode permet de configurer un capteur fixe classique. Vous pouvez configurer autant de capteurs que nécessaire sur ce mode (en général, vous pouvez utiliser un capteur fixe par pièce de votre habitation en incluant également le capteur fixe initiateur)
+
 \
 
 - Tag : **mode: tn (act,twr,np,le)**. Ce mode permet de configurer un capteur mobile. Vous devrez configurer un capteur mobile pour chaque utilisateur dans votre habitation.
@@ -227,15 +234,17 @@ Et également du compilateur **GNU Tools ARM Embedded (version 5.4 2016q3)**
 Liens de téléchargement : 
 
 - `Windows`_
+
 \
 
 - `Linux`_
+
 \
 
 - `MacOS`_
 
 
-Une fois **Segger Embedded Studio for ARM** installé, veuillez extraire l'archive **Source_Code_DWM-Tag.zip** précédemment téléchargée, en effectuant sur ce fichier **Clic droit -> Extraire Tout**
+Une fois **GNU Tools ARM Embedded** et **Segger Embedded Studio for ARM** installés, veuillez extraire l'archive **Source_Code_DWM-Tag.zip** précédemment téléchargée, en effectuant sur ce fichier **Clic droit -> Extraire Tout**
 
 Ensuite, naviguez dans les dossiers **Source_Code_DWM-Tag -> Source_Code_DWM-Tag -> src -> dwm-tag** puis sur le fichier **dwm-tag.emProject**, effectuez **Clic droit -> Ouvrir avec -> Segger Embedded Studio for ARM** 
 
@@ -261,6 +270,7 @@ Pour vérifier si tout fonctionne correctement, passez à la section suivante
 
 
 .. _verif_capteurs:
+
 Vérification du bon fonctionnement des capteurs
 -------------------------------------------------
 
@@ -291,4 +301,3 @@ Finalement, si tout fonctionne bien vous devriez voir des informations sur les d
 
 
 .. toctree::
-   environnement_dev/environment_dev

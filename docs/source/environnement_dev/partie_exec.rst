@@ -1,6 +1,8 @@
 Partie Exécutable
 =================
 
+.. _partie_executable:
+
 L'exécutable a été réalisé en python et fonctionne grâce au framework **Qt for Python Version 6 (PyQt6)**.
 
 Ce logiciel a été pensé pour être exécuté à la fois sur Windows et sur Linux.
