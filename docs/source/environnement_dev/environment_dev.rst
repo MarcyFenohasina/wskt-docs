@@ -1,21 +1,11 @@
 Environment de développement
 ==============================
 
-.. _archi_logicielle:
+.. _environnement_dev:
 
-Architecture logicielle
--------------------------
-
-.. image:: images/Archi_logicielle.png
-  :width: 400
-  :alt: Alternative text
-
-Architecture matérielle
--------------------------
-
-.. image:: images/Archi_materielle.png
-  :width: 400
-  :alt: Alternative text
 
 .. toctree::
-  manuel_utilisation/manuel_utilisation
+  archi_projet
+  partie_editeur
+  partie_exec
+  partie_api
